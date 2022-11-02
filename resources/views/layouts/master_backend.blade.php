@@ -60,11 +60,12 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index.php" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <a href="typography.php" class="nav-item nav-link  "><i class="fa fa-th me-2"></i>หน้าสินค้า</a>
-                    <a href="widget.php" class="nav-item nav-link"><i class="fa fa-info-circle"></i>หน้าเกี่ยวกับ</a>
-                    <a href="form.php" class="nav-item nav-link"><i class="fa fa-bullhorn"></i>หน้าข่าวสาร<br>และกิจกรรม</a>
-                    <a href="table.php" class="nav-item nav-link"><i class="fa fa-address-book"></i>หน้าติดต่อ</a>
+                    <a href="{{route('home')}}" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="{{route('typeproducts.index')}}" class="nav-item nav-link"><i class="fa fa-address-book"></i>ประเภาสินค้า   </a>
+                    <a href="{{route('product.index')}}" class="nav-item nav-link  "><i class="fa fa-th me-2"></i>หน้าสินค้า</a>
+                    <a href="{{route('about.index')}}" class="nav-item nav-link"><i class="fa fa-info-circle"></i>หน้าเกี่ยวกับ</a>
+                    <a href="{{route('contents.index')}}" class="nav-item nav-link"><i class="fa fa-bullhorn"></i>หน้าข่าวสาร<br>และกิจกรรม</a>
+                    <a href="{{route('contacts.index')}}" class="nav-item nav-link"><i class="fa fa-address-book"></i>หน้าติดต่อ</a>
                     <div class="nav-item dropdown">
 
                         <div class="dropdown-menu bg-transparent border-0">
