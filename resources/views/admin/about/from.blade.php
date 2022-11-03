@@ -21,8 +21,8 @@
                 <input
                 type="text"
                 class="form-control"
-                placeholder="Type"
-                aria-label="Type"
+                placeholder="Name"
+                aria-label="Name"
                 aria-describedby="basic-addon11"
                 name="Type"
                 />
@@ -47,9 +47,9 @@
                   type="text"
               class="form-control"
               placeholder="Detail"
-              aria-label="Detail"
+              aria-label="Name"
               aria-describedby="basic-addon11"
-              name="detail"
+              name="Name"
                   />
               </div>
 

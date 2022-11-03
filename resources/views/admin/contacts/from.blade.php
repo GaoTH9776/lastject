@@ -34,10 +34,10 @@
                       <input
                       type="text"
                   class="form-control"
-                  placeholder="Detail"
-                  aria-label="Detail"
+                  placeholder="Name"
+                  aria-label="Name"
                   aria-describedby="basic-addon11"
-                  name="detail"
+                  name="Detail"
                       />
                   </div>
     
