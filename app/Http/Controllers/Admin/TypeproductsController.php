@@ -16,5 +16,17 @@ class TypeproductsController extends Controller
 
     }
 
+    public function from_add()
+    {
+        return view('admin.typeproducts.from');
+    }
     
+    public function add(Request $request)
+    {
+        $typeproducts = new Typeproducts();
+        $typeproducts->name = $request->name;
+        $typeproducts->save();
+        // toast('บันทีกข้อมูลสำเร็จ','success');
+        return redirect()->route('typeproducts.index');
+    }
 }

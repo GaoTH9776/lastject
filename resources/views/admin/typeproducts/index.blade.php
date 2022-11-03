@@ -3,7 +3,7 @@
 
 <div class="d-flex align-items-center justify-content-between mb-4">
     <h6 class="mb-0">เมนูอาหาร</h6>
-    <a href="">เพิ่ม</a>
+    <a href="/admin/typeproducts/from">เพิ่ม</a>
 </div>
 <div class="table-responsive">
     <table class="table text-start align-middle table-bordered table-hover mb-0">

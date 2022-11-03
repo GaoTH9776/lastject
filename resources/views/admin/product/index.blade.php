@@ -3,7 +3,7 @@
 
 <div class="d-flex align-items-center justify-content-between mb-4">
     <h6 class="mb-0">เมนูอาหาร</h6>
-    <a href="">เพิ่ม</a>
+    <a href="{{route('products.from_add')}}" class="btn btn-success mx-15"><i class='bx bxs-plus-circle'></i> เพิ่มข้อมูล</a>
 </div>
 <div class="table-responsive">
     <table class="table text-start align-middle table-bordered table-hover mb-0">

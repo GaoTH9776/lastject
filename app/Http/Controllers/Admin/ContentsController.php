@@ -12,4 +12,18 @@ class ContentsController extends Controller
         $contents = Contents::Paginate(4);
         return view('admin.contents.index',compact('contents'));
     }
+    public function from_add()
+    {
+        return view('admin.contents.from');
+    }
+    
+    public function add(Request $request)
+    {
+        $contents = new Contents();
+        $contents->name = $request->name;
+        $contents->save();
+        // toast('บันทีกข้อมูลสำเร็จ','success');
+        return redirect()->route('contents.index');
+    }
 }
+
