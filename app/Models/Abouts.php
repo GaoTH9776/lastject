@@ -9,5 +9,5 @@ class Abouts extends Model
 {
     use HasFactory;
     protected $teble = 'abouts';
-    protected $fillable = ['name','detail','image'];
+    protected $fillable = ['name','details','image'];
 }

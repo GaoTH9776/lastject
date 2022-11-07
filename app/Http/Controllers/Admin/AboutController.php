@@ -19,7 +19,7 @@ class AboutController extends Controller
     }
     
     public function add(Request $request)
-    {
+    {   
         $about = new Abouts();
         $about->name = $request->name;
         $about->details = $request->details;
@@ -28,5 +28,28 @@ class AboutController extends Controller
         return redirect()->route('about.index');
     }
 
+
+    public function edit($id){
+
+        $about = Abouts::find($id);
+
+        return view('admin.about.edit',compact('about'));
+
+    }
+
+
+
+    public function update(Request $request, $id){
+
+        $about = Abouts::find($id);
+        $about->name = $request->name;
+        $about->details = $request->details;
+        $about->update();
+
+        // toast('แก้ไขข้อมูลสำเร็จ','success');
+
+        return redirect()->route('about.index');
+
+    }
 
 }

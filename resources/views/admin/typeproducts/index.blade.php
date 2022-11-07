@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="d-flex align-items-center justify-content-between mb-4">
-    <h6 class="mb-0">เมนูอาหาร</h6>
+    <h6 class="mb-0">ประเภทอาหาร</h6>
     <a href="/admin/typeproducts/from">เพิ่ม</a>
 </div>
 <div class="table-responsive">
@@ -24,7 +24,7 @@
    
 
              
-                <td><a class="btn btn-sm btn-primary" href="">แก้ไข</a></td>
+                <td><a class="btn btn-sm btn-primary" href="{{ route('typeproducts.edit',$item->id) }}">แก้ไข</a></td>
                 <td><a class="btn btn-sm btn-primary" href="">ลบ</a></td>
             </tr>
             @endforeach

@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="d-flex align-items-center justify-content-between mb-4">
-    <h6 class="mb-0">เมนูอาหาร</h6>
+    <h6 class="mb-0">เกี่ยวกับ</h6>
     <a href="{{route('abouts.from_add')}}">เพิ่ม</a>
 </div>
 <div class="table-responsive">
@@ -25,11 +25,11 @@
 
                 <td>{{ $abouts->firstItem()+$loop->index}}</td>
                 <td>{{ $item->name}} </td>
-                <td>{{ $item->detail}} </td>   
+                <td>{{ $item->details}} </td>   
                 <td>{{ $item->image}} </td>   
                 
              
-                <td><a class="btn btn-sm btn-primary" href="">แก้ไข</a></td>
+                <td><a class="btn btn-sm btn-primary" href="{{ route('about.edit',$item->id) }}">แก้ไข</a></td>
                 <td><a class="btn btn-sm btn-primary" href="">ลบ</a></td>
             </tr>
             @endforeach

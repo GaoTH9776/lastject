@@ -29,4 +29,32 @@ class TypeproductsController extends Controller
         // toast('บันทีกข้อมูลสำเร็จ','success');
         return redirect()->route('typeproducts.index');
     }
+
+    
+
+
+
+    public function edit($id){
+
+        $typeproducts = Typeproducts::find($id);
+
+        return view('admin.typeproducts.edit',compact('typeproducts'));
+
+    }
+
+
+
+    public function update(Request $request, $id){
+
+        $typeproducts= Typeproducts::find($id);
+
+        $typeproducts->name = $request->name;
+
+        $typeproducts->update();
+
+        // toast('แก้ไขข้อมูลสำเร็จ','success');
+
+        return redirect()->route('typeproducts.index');
+
+    }
 }

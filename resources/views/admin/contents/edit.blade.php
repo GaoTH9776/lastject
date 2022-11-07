@@ -1,4 +1,4 @@
-@extends('layouts.master_backend')
+@extends('layouts.master_backend')contents
 @section('content')
 
 <div class="content-wrapper">
@@ -14,7 +14,7 @@
           <div class="card mb-6">
             <div class="card-body demo-vertical-spacing demo-only-element">
               <div class="input-group">
-                <form action="{{ route('contents.add') }}" method="post">
+                <form action="{{ route('contents.update',$contents->id) }}" method="post">
                   @csrf
                   <h5>name</h5>
                   <div class="input-group">
@@ -24,7 +24,7 @@
                   placeholder="Name"
                   aria-label="Name"
                   aria-describedby="basic-addon11"
-                  name="name"
+                  name="name"value="{{$contents->name}}"
                       />
                   </div>
     
@@ -37,7 +37,7 @@
                   placeholder="Details  "
                   aria-label="Name"
                   aria-describedby="basic-addon11"
-                  name="Detail"
+                  name="details"value="{{$contents->details}}"
                       />
                   </div>
     

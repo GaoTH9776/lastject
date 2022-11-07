@@ -26,4 +26,29 @@ class ContactsController extends Controller
         return redirect()->route('contacts.index');
     
 }
+
+
+
+public function edit($id){
+$contacts=  Contacts::find($id);
+
+return view('admin.contacts.edit',compact('contacts'));
+
+}
+
+
+
+public function update(Request $request, $id){
+
+$contacts =  Contacts::find($id);
+
+$contacts->name = $request->name;
+
+$contacts->update();
+
+// toast('แก้ไขข้อมูลสำเร็จ','success');
+
+return redirect()->route('contact.index');
+
+}
 }

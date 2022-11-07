@@ -5,7 +5,7 @@
   <!-- Content -->
 
   <div class="container-xxl flex-grow-1 container-p-y">
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Forms Add/</span> Contents</h4>
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Forms Add/</span> Contacts</h4>
     
     <div class="row">
       <!-- Basic -->
@@ -14,7 +14,7 @@
           <div class="card mb-6">
             <div class="card-body demo-vertical-spacing demo-only-element">
               <div class="input-group">
-                <form action="{{ route('contents.add') }}" method="post">
+                <form action="{{ route('contents.update',$contacts->id) }}" method="post">
                   @csrf
                   <h5>name</h5>
                   <div class="input-group">
@@ -24,7 +24,7 @@
                   placeholder="Name"
                   aria-label="Name"
                   aria-describedby="basic-addon11"
-                  name="name"
+                  name="name"value="{{$contacts->name}}"
                       />
                   </div>
     
@@ -34,10 +34,10 @@
                       <input
                       type="text"
                   class="form-control"
-                  placeholder="Details  "
+                  placeholder="Name"
                   aria-label="Name"
                   aria-describedby="basic-addon11"
-                  name="Detail"
+                  name="details"value="{{$contacts->details}}"
                       />
                   </div>
     
@@ -53,7 +53,7 @@
                
                 
                 <Button type="submit" value="บันทึก" class="btn btn-success mt-3" >บันทึก</Button>
-                <a href="{{ route('contents.index') }}" class="btn btn-danger mt-3 mx-2">ย้อนกลับ</a>
+                <a href="{{ route('contacts.index') }}" class="btn btn-danger mt-3 mx-2">ย้อนกลับ</a>
               </div> 
             </div>
           </div>

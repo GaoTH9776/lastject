@@ -13,7 +13,7 @@
           <div class="card mb-6">
             <div class="card-body demo-vertical-spacing demo-only-element">
               <div class="input-group">
-                <form action="{{ route('abouts.add') }}" method="post">
+                <form action="{{ route('about.update',$about->id) }}" method="post">
                   @csrf
   
               <h5>Name</h5>
@@ -24,7 +24,7 @@
               placeholder="Name"
               aria-label="Name"
               aria-describedby="basic-addon11"
-              name="name"
+              name="name"value="{{$about->name}}"
                   />
               </div>
 
@@ -37,7 +37,7 @@
                     placeholder="Details"
                     aria-label="Name"
                     aria-describedby="basic-addon11"
-                    name="details"
+                    name="details"value="{{$about->details}}"
                         />
                     </div>
 
@@ -55,7 +55,7 @@
               </div> 
             </div>
           </div>
-    {{-- </form> --}}
+    </form>
   </div>
   <!-- / Content -->
 

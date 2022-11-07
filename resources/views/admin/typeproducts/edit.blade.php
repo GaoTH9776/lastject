@@ -14,7 +14,7 @@
           <div class="card mb-6">
             <div class="card-body demo-vertical-spacing demo-only-element">
               <div class="input-group">
-                <form action="{{ route('tyteproducts.add') }}" method="post">
+                <form action="{{ route('typeproducts.update',$typeproducts->id) }}" method="post">
                   @csrf
 
               <h5 class="card-header">Name</h5>
@@ -24,7 +24,7 @@
                 placeholder="Name"
                 aria-label="Name"
                 aria-describedby="basic-addon11"
-                name="name"
+                name="name" value="{{$typeproducts->name}}"
                 />
               </div>
               

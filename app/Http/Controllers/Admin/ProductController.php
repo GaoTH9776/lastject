@@ -33,4 +33,30 @@ class ProductController extends Controller
         return redirect()->route('product.index');
     }
     
+
+
+
+    public function edit($id){
+
+        $product = Products::find($id);
+
+        return view('admin.product.edit',compact('product'));
+
+    }
+
+
+
+    public function update(Request $request, $id){
+
+        $products = Products::find($id);
+        $products->name = $request->name;
+        $products->details = $request->details;
+        $products->price = $request->price;
+        $products->update();
+
+        // toast('แก้ไขข้อมูลสำเร็จ','success');
+
+        return redirect()->route('product.index');
+
+    }
 }

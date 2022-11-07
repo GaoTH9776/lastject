@@ -3,7 +3,7 @@
 
 <div class="d-flex align-items-center justify-content-between mb-4">
     <h6 class="mb-0">เมนูอาหาร</h6>
-    <a href="{{route('products.from_add')}}" class="btn btn-success mx-15"><i class='bx bxs-plus-circle'></i> เพิ่มข้อมูล</a>
+    <a href="/admin/product/from">เพิ่ม</a>
 </div>
 <div class="table-responsive">
     <table class="table text-start align-middle table-bordered table-hover mb-0">
@@ -29,7 +29,7 @@
                 <td> {{ $item->image}} </td>      
 
              
-                <td><a class="btn btn-sm btn-primary" href="">แก้ไข</a></td>
+                <td><a class="btn btn-sm btn-primary" href="{{ route('product.edit',$item->id) }}">แก้ไข</a></td>
                 <td><a class="btn btn-sm btn-primary" href="">ลบ</a></td>
             </tr>
             @endforeach

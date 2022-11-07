@@ -35,6 +35,10 @@ Route::get('/admin/typeproducts/index',[TypeproductsController::class, 'index'])
 Route::post('/admin/typeproducts/add', [TypeProductsController::class, 'add'])->name('tyteproducts.add');
 Route::get('/admin/typeproducts/from',[TypeproductsController::class, 'from_add'])->name('typeproducts.from_add');
 
+
+Route::post('/admin/typeproducts/update/{id}', [TypeproductsController::class, 'update'])->name('typeproducts.update');
+Route::get('/admin/typeproducts/edit/{id}', [TypeproductsController::class, 'edit'])->name('typeproducts.edit');
+
 //prodocts
 Route::get('/admin/product/index',[ProductController::class, 'index'])->name('product.index');
 
@@ -43,11 +47,18 @@ Route::post('/admin/product/add', [ProductController::class, 'add'])->name('prod
 Route::get('/admin/product/from',[ProductController::class, 'from_add'])->name('products.from_add');
 
 
+Route::post('/admin/product/update/{id}', [ProductController::class, 'update'])->name('products.update');
+Route::get('/admin/product/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
+
+
 //abouts
 Route::get('/admin/about/index',[AboutController::class, 'index'])->name('about.index');
 
 Route::post('/admin/about/add', [AboutController::class, 'add'])->name('abouts.add');
 Route::get('/admin/about/from',[AboutController::class, 'from_add'])->name('abouts.from_add');
+
+Route::post('/admin/about/update/{id}', [AboutController::class, 'update'])->name('about.update');
+Route::get('/admin/about/edit/{id}', [AboutController::class, 'edit'])->name('about.edit');
 
 //contents
 Route::get('/admin/contents/index',[ContentsController::class, 'index'])->name('contents.index');
@@ -56,8 +67,15 @@ Route::post('/admin/contents/add', [ContentsController::class, 'add'])->name('co
 Route::get('/admin/contents/from',[ContentSController::class, 'from_add'])->name('contents.from_add');
 
 
+Route::post('/admin/contents/update/{id}', [ContentsController::class, 'update'])->name('contents.update');
+Route::get('/admin/contents/edit/{id}', [ContentsController::class, 'edit'])->name('contents.edit');
+
+
 //contact
 Route::get('/admin/contacts/index',[ContactsController::class, 'index'])->name('contacts.index');
 
 Route::post('/admin/contacts/add', [ContactsController::class, 'add'])->name('contacts.add');
 Route::get('/admin/contacts/from',[ContactSController::class, 'from_add'])->name('contacts.from_add');
+
+Route::post('/admin/contacts/update/{id}', [ContactSController::class, 'update'])->name('contacts.update');
+Route::get('/admin/contacts/edit/{id}', [ContactSController::class, 'edit'])->name('contacts.edit');

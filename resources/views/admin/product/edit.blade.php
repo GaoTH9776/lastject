@@ -14,15 +14,8 @@
                 <div class="card mb-6">
                 <div class="card-body demo-vertical-spacing demo-only-element">
                     <div class="input-group">
-                    <form action="{{ route('products.add') }}" method="post">
+                    <form action="{{ route('products.update',$product->id) }}" method="post">
                         @csrf
-                    <h5 class="card-header">Product</h5>
-                    <select name="id_type_product">
-                    <option selected> กรุณาเลือกประเภท </option>
-                        @foreach ($typeproduct as $item)
-                                <option value="{{$item->id}}"> {{$item->name}} </option>
-                        @endforeach
-                    </select>
 
                     <h5 class="card-header">Name</h5>
                     <input
@@ -31,7 +24,7 @@
                     placeholder="Name"
                     aria-label="Name"
                     aria-describedby="basic-addon11"
-                    name="name"
+                    name="name" value="{{$product->name}}"
                     />
                     </div>
                     
@@ -43,7 +36,7 @@
                     placeholder="Name"
                     aria-label="Name"
                     aria-describedby="basic-addon11"
-                    name="details"
+                    name="details"value="{{$product->details}}"
                         />
                     </div>
                     
@@ -55,7 +48,7 @@
                         placeholder="Name"
                         aria-label="Name"
                         aria-describedby="basic-addon11"
-                        name="price"
+                        name="price"value="{{$product->price}}"
                         />
                     </div>
                     

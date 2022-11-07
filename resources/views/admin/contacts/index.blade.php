@@ -2,7 +2,7 @@
 @section('content') 
 
 <div class="d-flex align-items-center justify-content-between mb-4">
-    <h6 class="mb-0">เมนูอาหาร</h6>
+    <h6 class="mb-0">ติดต่อ</h6>
     <a href="/admin/contacts/from">เพิ่ม</a>
 </div>
 <div class="table-responsive">
@@ -27,7 +27,7 @@
                 <td> {{ $item->image}} </td>      
 
              
-                <td><a class="btn btn-sm btn-primary" href="">แก้ไข</a></td>
+                <td><a class="btn btn-sm btn-primary" href="{{ route('contacts.edit',$item->id) }}">แก้ไข</a></td>
                 <td><a class="btn btn-sm btn-primary" href="">ลบ</a></td>
             </tr>
             @endforeach
