@@ -59,4 +59,16 @@ class ProductController extends Controller
         return redirect()->route('product.index');
 
     }
+
+    public function delete($id){
+
+        $products = Products::find($id);
+
+        $products->delete();
+
+        // toast('ลบข้อมูลสำเร็จ','success');
+
+        return redirect()->route('product.index');
+
+    }
 }

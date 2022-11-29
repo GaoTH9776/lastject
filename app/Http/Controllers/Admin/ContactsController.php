@@ -21,6 +21,8 @@ class ContactsController extends Controller
     {
         $contacts = new Contacts();
         $contacts->name = $request->name;
+        $contacts->details = $request->details;
+        $contacts->image = $request->image;
         $contacts->save();
         // toast('บันทีกข้อมูลสำเร็จ','success');
         return redirect()->route('contacts.index');
@@ -41,14 +43,27 @@ return view('admin.contacts.edit',compact('contacts'));
 public function update(Request $request, $id){
 
 $contacts =  Contacts::find($id);
-
 $contacts->name = $request->name;
-
+$contacts->details = $request->details;
+$contacts->image = $request->image;
 $contacts->update();
 
 // toast('แก้ไขข้อมูลสำเร็จ','success');
 
-return redirect()->route('contact.index');
+return redirect()->route('contacts.index');
+
+}
+
+
+public function delete($id){
+
+    $contacts = Contacts::find($id);
+
+    $contacts->delete();
+
+    // toast('ลบข้อมูลสำเร็จ','success');
+
+    return redirect()->route('contacts.index');
 
 }
 }

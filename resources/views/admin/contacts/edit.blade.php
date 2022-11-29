@@ -14,7 +14,7 @@
           <div class="card mb-6">
             <div class="card-body demo-vertical-spacing demo-only-element">
               <div class="input-group">
-                <form action="{{ route('contents.update',$contacts->id) }}" method="post">
+                <form action="{{ route('contacts.update',$contacts->id) }}" method="post">
                   @csrf
                   <h5>name</h5>
                   <div class="input-group">
@@ -57,7 +57,7 @@
               </div> 
             </div>
           </div>
-    {{-- </form> --}}
+     </form> 
   </div>
   <!-- / Content -->
 

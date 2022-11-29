@@ -23,12 +23,12 @@
             <tr>
                 <td>{{ $contacts->firstItem()+$loop->index}} </td>
                 <td> {{ $item->name}} </td>   
-                <td> {{ $item->detail}} </td>   
+                <td> {{ $item->details}} </td>   
                 <td> {{ $item->image}} </td>      
 
              
                 <td><a class="btn btn-sm btn-primary" href="{{ route('contacts.edit',$item->id) }}">แก้ไข</a></td>
-                <td><a class="btn btn-sm btn-primary" href="">ลบ</a></td>
+                <td><a class="btn btn-sm btn-primary" href="{{ route('contacts.delete',$item->id) }}">ลบ</a></td>
             </tr>
             @endforeach
         </tbody>

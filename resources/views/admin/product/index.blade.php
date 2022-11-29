@@ -24,13 +24,13 @@
             <tr>
                 <td>{{ $products->firstItem()+$loop->index}} </td>
                 <td> {{ $item->name}} </td>   
-                <td> {{ $item->detail}} </td>   
+                <td> {{ $item->details}} </td>   
                 <td> {{ $item->price}} </td>
                 <td> {{ $item->image}} </td>      
 
              
                 <td><a class="btn btn-sm btn-primary" href="{{ route('product.edit',$item->id) }}">แก้ไข</a></td>
-                <td><a class="btn btn-sm btn-primary" href="">ลบ</a></td>
+                <td><a class="btn btn-sm btn-primary" href="{{ route('product.delete',$item->id) }}">ลบ</a></td>
             </tr>
             @endforeach
         </tbody>

@@ -30,7 +30,7 @@
                 
              
                 <td><a class="btn btn-sm btn-primary" href="{{ route('about.edit',$item->id) }}">แก้ไข</a></td>
-                <td><a class="btn btn-sm btn-primary" href="">ลบ</a></td>
+                <td><a class="btn btn-sm btn-primary" href="{{ route('about.delete',$item->id) }}">ลบ</a></td>
             </tr>
             @endforeach
         </tbody>

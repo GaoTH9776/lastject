@@ -52,4 +52,16 @@ class AboutController extends Controller
 
     }
 
+    public function delete($id){
+
+        $about = Abouts::find($id);
+
+        $about->delete();
+
+
+        return redirect()->route('about.index');
+
+    }
+    
+
 }

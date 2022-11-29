@@ -53,6 +53,17 @@ class ContentsController extends Controller
 
     }
 
+    public function delete($id){
+
+        $contents = Contents::find($id);
+
+        $contents->delete();
+
+        // toast('ลบข้อมูลสำเร็จ','success');
+
+        return redirect()->route('contents.index');
+
+    }
 
 
     

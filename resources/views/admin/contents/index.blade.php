@@ -28,7 +28,7 @@
 
              
                 <td><a class="btn btn-sm btn-primary" href="{{ route('contents.edit',$item->id) }}">แก้ไข</a></td>
-                <td><a class="btn btn-sm btn-primary" href="">ลบ</a></td>
+                <td><a class="btn btn-sm btn-primary" href="{{ route('contents.delete',$item->id) }}">ลบ</a></td>
             </tr>
             @endforeach
         </tbody>

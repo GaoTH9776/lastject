@@ -57,4 +57,15 @@ class TypeproductsController extends Controller
         return redirect()->route('typeproducts.index');
 
     }
+
+    public function delete($id){
+
+        $typeproducts = Typeproducts::find($id);
+
+        $typeproducts->delete();
+
+        return redirect()->route('typeproducts.index');
+
+    }
+        
 }

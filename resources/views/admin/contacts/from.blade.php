@@ -24,7 +24,7 @@
                   placeholder="Name"
                   aria-label="Name"
                   aria-describedby="basic-addon11"
-                  name="detail"
+                  name="name"
                       />
                   </div>
     
@@ -37,7 +37,7 @@
                   placeholder="Name"
                   aria-label="Name"
                   aria-describedby="basic-addon11"
-                  name="Detail"
+                  name="details"
                       />
                   </div>
     
